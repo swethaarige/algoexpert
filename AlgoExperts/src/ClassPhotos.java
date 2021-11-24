@@ -103,7 +103,7 @@ public class ClassPhotos {
                     return false;
                 }
             }
-            if (firstRow == "BLUE") {
+            else {
                 if(blueShirtHeight >= redShirtHeight) {
                     return false;
                 }
