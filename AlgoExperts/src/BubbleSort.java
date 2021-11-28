@@ -94,6 +94,9 @@ public class BubbleSort {
     }
 
     public static int[] bubbleSort(int[] array) {
+        if (array.length == 0) {
+            return new int[] {};
+        }
         boolean isSorted = false;
         int counter = 0;
         while (!isSorted) {
