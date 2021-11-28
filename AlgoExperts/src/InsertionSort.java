@@ -77,7 +77,7 @@ public class InsertionSort {
             System.out.println("Insertion Sorted Array for the given array is :" + num);
         }
     }
-        public static int[] insertionSort(int[] array){
+        public static int[] insertionSort(int[] array) {
             if (array.length == 0) {
                 return new int[]{};
             }
