@@ -9,7 +9,7 @@ public class NonRepeatingCharacter {
         String str = "GeeksQuiz";
         System.out.println("Non Repeating character for the given string is " +firstNonRepeatingCharacter(str));
     }
-
+  // O(n) Time and O(1) Space
     public static int firstNonRepeatingCharacter(String string) {
         HashMap<Character, Integer> characterFrequencies = new HashMap<>();
 
