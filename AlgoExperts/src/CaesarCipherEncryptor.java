@@ -20,7 +20,7 @@ public class CaesarCipherEncryptor {
         char[] newLetters = new char[string.length()];
         int newKey = key % 26;
         for (int i = 0; i < string.length(); i++) {
-            newLetters[i] = getNewLetter(string.charAt(i), key);
+            newLetters[i] = getNewLetter(string.charAt(i), newKey);
         }
         return new String(newLetters);
     }
