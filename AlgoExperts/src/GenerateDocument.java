@@ -18,6 +18,9 @@ document = "AlgoExpert is the Best!"
 Sample Output :
 true
  */
+//O(n + m) time | O(c) space
+//where n is the number of the characters , m is the length of the document
+//and c is the number of unique characters in the characters string
 
 import java.util.HashMap;
 
@@ -25,7 +28,8 @@ public class GenerateDocument {
     public static void main (String[] args) {
         String characters = "Bste!hetsi ogEAxpelrt x ";
         String document = "AlgoExpert is the Best!";
-        System.out.println("Generated document can be possible " +generateDocument(characters, document));
+        System.out.println("Generated document can be possible " +
+                generateDocument(characters, document));
     }
     public static boolean generateDocument(String characters, String document) {
         HashMap<Character, Integer> characterCounts = new HashMap<>();
