@@ -38,7 +38,7 @@ public class SmallestDifference {
         int idxTwo = 0;
         int smallestNum = Integer.MAX_VALUE;
         int currentSum;
-        int[] twoPairNums = new int[2] ;
+        int[] smallestPair = new int[2] ;
         while (idxOne < arrayOne.length && idxTwo < arrayTwo.length) {
             int firstNum = arrayOne[idxOne];
             int secondNum = arrayTwo[idxTwo];
@@ -55,9 +55,9 @@ public class SmallestDifference {
             }
             if (smallestNum > currentSum) {
                 smallestNum = currentSum;
-                twoPairNums = new int[]{firstNum, secondNum};
+                smallestPair = new int[]{firstNum, secondNum};
             }
         }
-        return twoPairNums;
+        return smallestPair;
     }
 }
