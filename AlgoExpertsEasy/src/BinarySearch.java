@@ -37,7 +37,7 @@ public class BinarySearch {
         list.add(1); list.add(2); list.add(3); list.add(4); list.add(5);
         System.out.println("Checking if 4 is available in list using BinarySearch is "
                 +binarySearch(list, 4));
-        System.out.println("Checking if 4 is available in list using BinarySearch is "
+        System.out.println("Checking if 7 is available in list using BinarySearch is "
                 +binarySearch(list, 7));
     }
 
