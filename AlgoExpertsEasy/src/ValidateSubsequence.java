@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 
@@ -29,6 +28,7 @@ the length of the sequence array, then it means all the numbers in the sequence
  After the loop finishes, if the pointer is not equal to the length of the
  sequence array, return false.
  */
+// O(n) Time and O(1) Space
 public class ValidateSubsequence {
 
     public static void main(String[] args) {

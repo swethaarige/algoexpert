@@ -12,13 +12,29 @@ import java.util.Arrays;
  <--|---|---|---|---|---|---|---|---|-->
  -5  -4  -3  -2  -1   0   1   2   3
  25  16   9   4   1   0   1   4   9
- What the number line also tells us is the largest value in the output array is either going to come from the smallest element in the input array or the largest element in the input array. Since we know where to find the largest squared value in the input array, we can build the sorted squared values array from largest square value to smallest squared value. We can use two pointers to keep track of the smallest integer and the largest integer in the input array; compare the absolute value of the two integers to find out which integer is larger once squared; square the larger value and put it into the resulting array; move the pointer that points to the larger value either to left if the largest squared value comes from the largest integer or to right if it comes from the smallest integer, so we can find the next largest squared value. Continue until the resulting array is filled up.
+ What the number line also tells us is the largest value in the output array is either going to come from
+ the smallest element in the input array or the largest element in the input array. Since we know where
+ to find the largest squared value in the input array, we can build the sorted squared values array
+ from largest square value to smallest squared value. We can use two pointers to keep track of the
+ smallest integer and the largest integer in the input array; compare the absolute value of the two
+ integers to find out which integer is larger once squared; square the larger value and put it
+ into the resulting array; move the pointer that points to the larger value either to left if
+ the largest squared value comes from the largest integer or to right if it comes from the
+ smallest integer, so we can find the next largest squared value. Continue until the resulting
+ array is filled up.
 
- Initialize an empty array, called sortedSquares to store the sorted squared values. The size of the array is going to be the same as the input array.
- Initialize two pointers, one called smallerValueIdx and other called largerValueIdx. Point smallerValueIdx to first number in the array and largerValueIdx to the last number in the array.
- Initialize a variable, called i. i is going to index the correct location in the sortedSquares that we should put the square into. Initially, i equals the index of the last element in the input array.
+ Initialize an empty array, called sortedSquares to store the sorted squared values. The size of the array
+ is going to be the same as the input array.
+ Initialize two pointers, one called smallerValueIdx and other called largerValueIdx.
+ Point smallerValueIdx to first number in the array and largerValueIdx to the last number in the array.
+ Initialize a variable, called i. i is going to index the correct location in the sortedSquares that
+ we should put the square into. Initially, i equals the index of the last element in the input array.
  Loop until i is less than 0, which means all numbers are squared and have been put into the resulting array.
- Compare the absolute value of the integer that smallerValueIdx points to with the absolute value of the integer that largerValueIdx points to, if the value of the smaller number is greater than or equal to the larger number, square the smaller number and place the result into sortedSquares[i]; increase smallerValueIdx by 1, otherwise, square the larger number and put the square into sortedSquares[i], decrease largerValueIdx by 1.
+ Compare the absolute value of the integer that smallerValueIdx points to with the absolute value of
+ the integer that largerValueIdx points to, if the value of the smaller number is greater than or
+ equal to the larger number, square the smaller number and place the result into sortedSquares[i];
+ increase smallerValueIdx by 1, otherwise, square the larger number and put the square into
+ sortedSquares[i], decrease largerValueIdx by 1.
  Decrease i by 1.
  Time & Space Complexity
  O(n) time | O(n) space, where n is the length of the input array.

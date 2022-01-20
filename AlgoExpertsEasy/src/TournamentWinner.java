@@ -61,7 +61,7 @@ public class TournamentWinner {
     }
 
     public static String tournamentWinner (ArrayList<ArrayList<String>> competitions, ArrayList<Integer> results) {
-         int HOME_TEAM_WON = 1;
+        int HOME_TEAM_WON = 1;
         String currentBestTeam = "";
         HashMap<String, Integer> scores = new HashMap<String, Integer>();
         scores.put(currentBestTeam, 0);

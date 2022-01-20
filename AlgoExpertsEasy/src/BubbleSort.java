@@ -37,7 +37,10 @@ Move on to index 4.
 
 [5, 2, 8, 6, 1, 9]
              ^
-We can notice that the largest number in the array, which is 9, is now in the final correct order. The reason for that is whenever we get to the largest number in the array, the number is going to be swapped all the way to the end of the array. And since it is in the final position, we don't need to check it again.
+We can notice that the largest number in the array, which is 9, is now in the final correct order.
+The reason for that is whenever we get to the largest number in the array, the number is going to
+be swapped all the way to the end of the array. And since it is in the final position, we don't
+need to check it again.
 
 We then start at index 0 again, compare 5 to 2.
 
