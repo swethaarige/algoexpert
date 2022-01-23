@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
 In Binary Tree, Inorder successor of a node is the next node in Inorder traversal of the Binary Tree.
 Inorder Successor is NULL for the last node in Inorder traversal.
@@ -30,6 +32,7 @@ public class InOrderSuccesorInBST {
             this.value = value;
         }
     }
+    //O(h) time where h is the height of the binary tree and O(1) space
     public BinaryTree findSuccessor(BinaryTree tree, BinaryTree node) {
         if (node.right != null) return getLeftMostChild(node.right);
          return getRightMostParent(node);
@@ -49,5 +52,31 @@ public class InOrderSuccesorInBST {
             currentNode = currentNode.parent;
         }
         return  currentNode.parent;
+    }
+    //O(n) time and O(n) space where n is the number of nodes in the binary tree
+    public BinaryTree findSuccessor2(BinaryTree tree, BinaryTree node) {
+        ArrayList<BinaryTree> inOrderTraversalList = new ArrayList<>();
+        getInOrderTraversalList(tree, inOrderTraversalList);
+        for (int i = 0; i < inOrderTraversalList.size(); i++) {
+            BinaryTree currentNode = inOrderTraversalList.get(i);
+
+            if (currentNode != node) {
+                continue;
+            }
+            if (i == inOrderTraversalList.size() - 1) {
+                return null;
+            }
+            return inOrderTraversalList.get(i + 1);
+        }
+        return null;
+    }
+    public static void getInOrderTraversalList(BinaryTree node,
+                                                     ArrayList<BinaryTree> inOrderTraversalList) {
+        if (node == null) return;
+
+        getInOrderTraversalList(node.left, inOrderTraversalList);
+        inOrderTraversalList.add(node);
+        getInOrderTraversalList(node.right, inOrderTraversalList);
+
     }
 }
