@@ -7,6 +7,7 @@ In relation to the input array you can intrepret these diretions as right for ea
 Sample Input : buildings = [3,5,4,4,3,1,3,2]
 direction = "EAST"
 Sample Output : [1, 3, 6, 7]
+Time Complexity O(n) and Space Complexity is O(n)
  */
 
 import java.util.ArrayList;
