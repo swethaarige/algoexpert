@@ -9,7 +9,8 @@ public class MergeOverlappingIntervals {
         int[][] arr = {{1, 2}, {3, 5},{4, 7}, {6, 8}, {9, 10} };
         int[][] mergedIntervals = mergeOverlappingIntervals(arr);
         for (int[] mergedInterval : mergedIntervals) {
-            System.out.println("Merge Overlapping Intervals for the given array are :" +mergedInterval[0] + mergedInterval[1]);
+            System.out.println("Merge Overlapping Intervals for the given array are :"
+                    +mergedInterval[0] + mergedInterval[1]);
         }
     }
     public static int[][] mergeOverlappingIntervals(int[][] intervals) {

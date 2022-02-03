@@ -27,10 +27,12 @@ O(n) time | O(1) space, where n is the length of the input array.
 
 public class ThreeLargestNumbers {
     public static void main(String[] args) {
-        int[] array = {141, 1, 17, -7, -17, -27, 18, 541, 8, 7, 7 };
+        int[] array1 = {141, 1, 17, -7, -17, -27, 18, 541, 8, 7, 7 };
+        int[] array = {18468, 6335, 26501, 19170, 15725, 11479, 29359, 26963, 24465, 5706, 28146, 23282,
+                16828, 9962, 492, 2996, 11943, 4828, 5437, 32392, 14605 };
         int[] resultArray = threeLargestNumbers(array);
         System.out.println("Three largest Numbers in the given array are : "
-                +resultArray[0]+resultArray[1]+resultArray[2]);
+                +resultArray[0] + " " +resultArray[1] + " "  +resultArray[2]);
     }
 
     public static int[] threeLargestNumbers (int[] array) {
