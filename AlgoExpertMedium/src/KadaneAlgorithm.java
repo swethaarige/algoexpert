@@ -1,10 +1,12 @@
 /*
 Kadane’s Algorithm is an iterative dynamic programming algorithm.
 It calculates the maximum sum subarray ending at a particular position by using the
-maximum sum subarray ending at the previous position. Follow the below steps to solve the problem.
+maximum sum subarray ending at the previous position.
+Follow the below steps to solve the problem.
 The simple idea of Kadane’s algorithm is to look for all positive contiguous segments of the array
-(max_ending_here is used for this). And keep track of maximum sum contiguous segment among all
-positive segments (max_so_far is used for this). Each time we get a positive-sum compare it with
+(max_ending_here is used for this).
+And keep track of maximum sum contiguous segment among all positive segments
+(max_so_far is used for this). Each time we get a positive-sum compare it with
 max_so_far and update max_so_far if it is greater than max_so_far
 O(n) time O(1) space
 Maximum Contigous Sum
