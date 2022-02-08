@@ -21,9 +21,7 @@ The output should be:
 Approach with recursive DFS
 Instead of using a stack to keep track of the next node that needs to be visited and the running sum,
 use the call stack to track these info.
-
 Initialize an empty array to store the branch sums.
-
 Define a helper function that will be recursively invoked. The function takes in three parameters.
 The first parameter is the node needs to be visited; the second parameter is the running sum;
 and the last parameter is the branch sums array. Call the helper function in the main function
@@ -31,15 +29,9 @@ passing in the root node of the tree as the node to be visited, 0 as the running
 empty branch sums array. In the helper function:
 
 Check if the node to be visited is null. If it is, return.
-
 Calculate the new running sum by adding the value of the node to the running sum.
-
 If the node doesn't have any children, append the new running sum to the branch sums array.
-
 Recursively call the helper function passing in the left child of the node, the new running sum
-and the branch sums array.
-
-Recursively call the helper function passing in the right child of the node, the new running sum
 and the branch sums array.
 
 When I get out of the helper function, return the branch sums array as part of the main function.
