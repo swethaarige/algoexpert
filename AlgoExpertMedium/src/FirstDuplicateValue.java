@@ -1,5 +1,11 @@
 import java.util.HashSet;
-
+/*Given an array of integers between 1 and n inclusive where n is the length of the array.
+Write the function that returns the first integer that appears more than once(when array is read from
+left and right)
+In other words out of all the integers that might occur more than once in the input array
+your function should return the one whose first duplicate value has the minimum index
+If no integer appears more than once, your function should return -1
+ */
 public class FirstDuplicateValue {
     public static void main(String[] args) {
         int[] array = {2, 1, 5, 2, 3, 3, 4};
