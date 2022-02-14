@@ -5,8 +5,8 @@ Objective: – Given a preorder traversal, construct BST from that.
 Input: Preorder traverse
 Approach # 1 Brute Force
 Preorder- first value will be root
-And then iterate through the list of preorder traverse values and if you find the value greater than the root value
-then right subtree index starts from that number.
+And then iterate through the list of preorder traverse values and if you find the value greater
+than the root value then right subtree index starts from that number.
 O(n^2) time complexity and O(n) space complexity
 
 Approach # 2 Optimal Solution
@@ -23,7 +23,7 @@ So when putting the left node of 20(root), it must lie within the range to minim
 and maximum = 20, so check the next element in the preorder[], if it lies in this range,
 make it the left child to the root, else it must the  right child of the root and so on.
 Solve it recursively.
-Time Complexity: O(n)
+Time Complexity: O(n) Space Complexity O(n)
  */
 
 import java.util.List;

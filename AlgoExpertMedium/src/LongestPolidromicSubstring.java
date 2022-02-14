@@ -1,11 +1,14 @@
 
 //O(n^2) Time  and O(n) space
 /*
-The idea is again the same. For every substring, we will check if it is a palindrome or not, and if it is then we will take the longest among them. The only change is that now we will store if a substring is a palindrome or not in the “dp” array.
+The idea is again the same. For every substring, we will check if it is a palindrome or not, and if it is then
+we will take the longest among them. The only change is that now we will store if a substring is a palindrome
+or not in the “dp” array.
 
-Now to check if a substring with starting index as “i” and ending index as “j” is a palindrome or not, we just have to check two conditions,
+Now to check if a substring with starting index as “i” and ending index as “j” is a palindrome or not,
+we just have to check two conditions,
 
- If the ith and jth characters of the string are equal, and
+If the ith and jth characters of the string are equal, and
 If substring with starting index as i+1 and ending index as j-1, is a palindrome.
 If both the above conditions are true, then it means this substring is also a palindrome.
  */

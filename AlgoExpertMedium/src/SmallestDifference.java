@@ -22,6 +22,7 @@ Move a, since it is smaller.
 5. Now a points to 11 and b points to 12. Update min to 1. Move b. And so on.
  */
 //Time Complexity is O(nlogn)+O(mlogm) n is length of A array and m is length of B array.
+//Space Complexity is O(1)
 public class SmallestDifference {
     public static void main (String[] args) {
         int[] arrayOne = {1, 2, 11, 15};
@@ -30,8 +31,10 @@ public class SmallestDifference {
         int[] B = {50, 90, 80};
         int[] twoPairsSe1 = smallestDifference(arrayOne, arrayTwo);
         int[] twoPairsSe2 = smallestDifference(A, B);
-        System.out.println("Smallest Difference between 2 arrays is : " +twoPairsSe1[0] + ", " +twoPairsSe1[1]);
-        System.out.println("Smallest Difference between 2 arrays is : " +twoPairsSe2[0] + ", " +twoPairsSe2[1]);
+        System.out.println("Smallest Difference between 2 arrays is : "
+                +twoPairsSe1[0] + ", " +twoPairsSe1[1]);
+        System.out.println("Smallest Difference between 2 arrays is : "
+                +twoPairsSe2[0] + ", " +twoPairsSe2[1]);
     }
     public static int[] smallestDifference (int[] arrayOne, int[] arrayTwo) {
         int idxOne = 0;

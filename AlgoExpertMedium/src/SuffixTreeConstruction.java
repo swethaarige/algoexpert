@@ -39,18 +39,19 @@ public class SuffixTreeConstruction {
               insertSubStringStartingAt(i, str);
           }
        }
+
        public static void insertSubStringStartingAt(int i, String str) {
            TrieNode node = root;
            for (int j = i; j < str.length(); j++) {
                char letter = str.charAt(j);
                if (!node.children.containsKey(letter)) {
                    TrieNode newNode = new TrieNode();
-                   node.children.put(letter,newNode);
+                   node.children.put(letter, newNode);
                }
                node.children.put(endSymbol, null);
            }
-
        }
+
        public boolean contains(String str) {
           TrieNode node = root;
           for (int i = 0; i < str.length(); i++) {

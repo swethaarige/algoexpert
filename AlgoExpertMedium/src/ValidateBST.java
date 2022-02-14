@@ -1,5 +1,5 @@
 
-//O(n) Time and O(d) Space
+  //O(n) Time and O(d) Space
    public class ValidateBST {
     public static void main(String[] args) {
         System.out.println("Validated the given BST and the result is :");

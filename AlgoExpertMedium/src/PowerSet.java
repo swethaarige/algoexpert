@@ -20,7 +20,7 @@ generate all combinations of length 0 (empty set)
 generate all combinations of length 1 (individual elements)
 generate all combinations of length 2
 … and so on until the length of the given array.
-
+Time Complexity - O(n * 2 ^n) and Space Complexity - O(n * 2 ^n)
  */
 public class PowerSet {
     public static void main(String[] args) {
@@ -38,12 +38,12 @@ public class PowerSet {
         List<List<Integer>> subsets = new ArrayList<>();
         subsets.add(new ArrayList<>());
         for (Integer ele : array) {
-            /*System.out.println("Element" +ele);*/
+            System.out.println("Element" +ele);
             int length = subsets.size();
-            /*System.out.println("Lenegth " +length);*/
+            System.out.println("Lenegth " +length);
             for (int i = 0; i < length; i++) {
-               /* System.out.println("Subsets of i " +subsets.get(i));
-                System.out.println("Elements " +ele);*/
+                System.out.println("Subsets of i " +subsets.get(i));
+                System.out.println("Elements " +ele);
                 List<Integer> currentSubset = new ArrayList<Integer>(subsets.get(i));
                 currentSubset.add(ele);
                 subsets.add(currentSubset);
