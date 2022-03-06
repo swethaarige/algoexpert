@@ -8,7 +8,7 @@ Output : 3
 That is, the pair (11, 8)
 A simple solution is to Brute Force using two loops with Time Complexity O(n2).
 A better solution is to sort the arrays. Once the arrays are sorted, we can find the minimum
-difference by iterating through the arrays using the approach discussed in below post.
+difference by iterating through the arrays using the approach discussed below.
 Consider the following two arrays:
 A: {l, 2, 11, 15}
 B: {4, 12, 19, 23, 127, 235}
