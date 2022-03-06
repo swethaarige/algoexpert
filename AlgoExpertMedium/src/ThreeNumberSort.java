@@ -1,13 +1,15 @@
 /*
-You are given array of integers and another array of three distinct integers. First Array is guranteed to contain the inetgers that are in second array
-The second array represents the desired order of the first array. For example second array of [ x, y, z] represents the desired order of
-[x,x,..x,y, y, y..y,z,z,....z} in the first array.
+You are given array of integers and another array of three distinct integers. First Array is guaranteed to
+contain the integers that are in second array.
+The second array represents the desired order of the first array. For example second array of [x, y, z]
+represents the desired order of [x,x,..x,y, y, y..y,z,z,....z} in the first array.
 Write a function that sorts the first array according to the desired order in the second array.
-The funcion should perform this in Place.
+The function should perform this in Place.
 array = [1, 0, 0, -1, -1, 0, 1, 1]
 order = [0, 1, -1]
 
 Sample Output : [0,0,0,1,1,1,-1,-1]
+Time Complexity - O(n) and Space Complexity - O(1)
  */
 
 public class ThreeNumberSort {

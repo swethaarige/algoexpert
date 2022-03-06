@@ -26,6 +26,8 @@ sortedInsert(Stack S, element)
         temp = pop(S)
         sortedInsert(S, element)
         push(S, temp)
+Time Complexity - O(n^2) Space Complexity - O(n)
+n is length of the stack
  */
 
 import java.util.ArrayList;

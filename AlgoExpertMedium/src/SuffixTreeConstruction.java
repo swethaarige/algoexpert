@@ -20,6 +20,7 @@ a\0
 \0
  */
 
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -34,23 +35,26 @@ public class SuffixTreeConstruction {
        public SuffixTrie(String str) {
            populateSuffixTrieFrom(str);
        }
+
+       //O(n^2) Time and O(n^2) Space
        public void populateSuffixTrieFrom(String str) {
           for (int i = 0; i < str.length(); i++) {
               insertSubStringStartingAt(i, str);
           }
        }
+
        public static void insertSubStringStartingAt(int i, String str) {
            TrieNode node = root;
            for (int j = i; j < str.length(); j++) {
                char letter = str.charAt(j);
                if (!node.children.containsKey(letter)) {
                    TrieNode newNode = new TrieNode();
-                   node.children.put(letter,newNode);
+                   node.children.put(letter, newNode);
                }
                node.children.put(endSymbol, null);
            }
-
        }
+       //O(m) Time and O(1) Space
        public boolean contains(String str) {
           TrieNode node = root;
           for (int i = 0; i < str.length(); i++) {

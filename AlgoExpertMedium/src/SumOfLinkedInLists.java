@@ -39,6 +39,37 @@ Space Complexity: O(max(m,n)). The length of the new list is at most max(m,n)+1.
  */
 
 public class SumOfLinkedInLists {
+    // Driver Code
+    public static void main(String[] args) {
+        LinkedList list1 = new LinkedList(7);
+        list1.next = new LinkedList(5);
+        list1.next.next = new LinkedList(9);
+        list1.next.next.next = new LinkedList(4);
+        list1.next.next.next.next = new LinkedList(6);
+        System.out.print("First List is ");
+        printList(list1);
+
+        // creating second list
+        LinkedList list2 = new LinkedList(8);
+        list2.next = new LinkedList(4);
+        System.out.print("Second List is ");
+        printList(list2);
+
+        System.out.print("Resultant List is ");
+        // add the two lists and see the result
+        LinkedList result = sumOfLinkedLists(list1, list2);
+        printList(result);
+    }
+
+    /* Utility function to print a linked list */
+    static void printList(LinkedList head) {
+        while (head != null) {
+            System.out.print(head.value + " ");
+            head = head.next;
+        }
+        System.out.println("");
+    }
+
     public static class LinkedList {
         public int value;
         public LinkedList next;
@@ -48,7 +79,7 @@ public class SumOfLinkedInLists {
             this.next = null;
         }
     }
-    public LinkedList sumOfLinkedLists(LinkedList linkedListOne, LinkedList linkedListTwo) {
+    public static LinkedList sumOfLinkedLists(LinkedList linkedListOne, LinkedList linkedListTwo) {
         LinkedList newLinkedListHeadPointer = new LinkedList(0);
         LinkedList currentNode = newLinkedListHeadPointer;
         int carry = 0;

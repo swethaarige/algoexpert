@@ -1,7 +1,10 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
+/*
+Time Complexity - O(n * L) n is number of words and L is the length of the big word in the given input words
+Space Complexity - O(c) c is the number of the unique characters across all the given words
+ */
 public class MinimumCharactersForWords {
 
     public static void main (String[] args) {

@@ -12,11 +12,11 @@ Output: Balanced
 Input: exp = “[(])”
 Output: Not Balanced
 Algorithm:
-Declare a character stack S.
-Now traverse the expression string exp.
-If the current character is a starting bracket (‘(‘ or ‘{‘ or ‘[‘) then push it to stack.
-If the current character is a closing bracket (‘)’ or ‘}’ or ‘]’) then pop from stack and if the popped character is the
-matching starting bracket then fine else brackets are not balanced.
+1. Declare a character stack S.
+ 2, Now traverse the expression string exp.
+3. If the current character is a starting bracket (‘(‘ or ‘{‘ or ‘[‘) then push it to stack.
+If the current character is a closing bracket (‘)’ or ‘}’ or ‘]’) then pop from stack and if
+the popped character is the matching starting bracket then fine else brackets are not balanced.
 After complete traversal, if there is some starting bracket left in stack then “not balanced”
 O(n) Time and O(n) Space
  */

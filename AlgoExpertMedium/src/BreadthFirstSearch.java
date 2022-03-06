@@ -1,5 +1,6 @@
 /*
-The implementation can be done using a queue [a queue is a data structure used to store objects, where objects are inserted and removed according to the first-in-first-out (FIFO) principle]:
+The implementation can be done using a queue [a queue is a data structure used to store objects
+, where objects are inserted and removed according to the first-in-first-out (FIFO) principle]:
 1. Start with root node. Mark it visited.
 2. Push its left child node and right child node to the queue.
 3. Pop a node from the queue and mark it as visited. Push its left child node and right child node to the queue.

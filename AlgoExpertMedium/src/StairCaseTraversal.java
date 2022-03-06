@@ -1,8 +1,9 @@
 /*
-You are two positive integers representing the height of a staircase and the maximum number of Steps that you can
-advance up the staircase at a time. Write a function that returns the number of ways in which you can climb the staircase.
-For example if you were given a staircase of height = 3 and maxSteps = 2 you can climb the staircase in 3 ways. You could take
-1 step, 1 step and 1 step and you could also take 1 step and then 2 steps and you could take 2 steps and then 1 step
+You are two positive integers representing the height of a staircase and the maximum number of Steps
+that you can advance up the staircase at a time. Write a function that returns the number of ways in
+which you can climb the staircase.For example if you were given a staircase of height = 3 and maxSteps = 2
+you can climb the staircase in 3 ways. You could take 1 step, 1 step and 1 step and you could also take
+1 step and then 2 steps and you could take 2 steps and then 1 step
 Note that maxSteps <= height will always be true.
 Sample Input height = 4 maxSteps = 2
 Sample OutPut :  5
@@ -13,8 +14,10 @@ import java.util.HashMap;
 
 public class StairCaseTraversal {
     public static void main (String[] args) {
-        System.out.println("Number Of Ways To Traverse the staircase is "+stairCaseTraversal1(4, 2));
-        System.out.println("Number Of Ways To Traverse the staircase is "+stairCaseTraversal2(4, 2));
+        System.out.println("Number Of Ways To Traverse the staircase is "
+                +stairCaseTraversal1(4, 2));
+        System.out.println("Number Of Ways To Traverse the staircase is "
+                +stairCaseTraversal2(4, 2));
     }
     //Solution 1 Recursive Approach
     //O(k^n)time and O(n) space where n is the height of the staircase and k is the number of allowed steps
@@ -86,9 +89,4 @@ public class StairCaseTraversal {
         }
         return currentNumberOfWays;
     }
-
-
-
-
-
 }

@@ -1,7 +1,8 @@
 /*
-Given a set of buildings in an array, process the buildings from east to west and return the list of buildings that have a sunset view.
-If a building is shorter than another building to its west then it looses its sunset view.
-A buidling can see the sunset if its strictly taller than all of the buidlings that come after it in the direction that it faces.
+Given a set of buildings in an array, process the buildings from east to west and return the list
+of buildings that have a sunset view.If a building is shorter than another building to its west
+then it looses its sunset view.A buidling can see the sunset if its strictly taller than all of the
+buidlings that come after it in the direction that it faces.
 All of the buidings face the same direction and this direction is either east or west.
 In relation to the input array you can intrepret these diretions as right for east and left for west.
 Sample Input : buildings = [3,5,4,4,3,1,3,2]
@@ -47,8 +48,4 @@ public class SunSetViews {
         }
           return buildingsWithSunsetViews;
         }
-
-
-
-
 }

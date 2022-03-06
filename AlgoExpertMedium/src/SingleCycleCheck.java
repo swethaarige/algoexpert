@@ -52,7 +52,7 @@ account for both cases. If the next index is positive we are good to go, but if 
 do some work. We can add the next index to the length of the array to find the array position we will
 end up on if the leap is negative.
 
-
+Time Complexity O(n) Space Complexity O(1)
  */
 public class SingleCycleCheck {
 
@@ -66,7 +66,8 @@ public class SingleCycleCheck {
         int numOfElementsVisited = 0;
         int currentIdx = 0;
         while (numOfElementsVisited < array.length) {
-            if (numOfElementsVisited > 0 && currentIdx == 0) return false;
+            if (numOfElementsVisited > 0 && currentIdx == 0)
+                return false;
             numOfElementsVisited++;
             currentIdx = getNextIdx(currentIdx, array);
         }

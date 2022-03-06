@@ -24,6 +24,7 @@ public class KadaneAlgorithm {
             int num = array[i];
             maxEndingHere = Math.max(maxEndingHere + num , num);
             maxSoFar = Math.max(maxEndingHere, maxSoFar);
+            System.out.println("MaxEnding and MaxSoFar " +maxEndingHere + ", "  +maxSoFar);
         }
         return maxSoFar;
     }
