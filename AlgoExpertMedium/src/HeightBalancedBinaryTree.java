@@ -20,6 +20,20 @@ the left subtree or the right subtree.
  */
 //O(n) Time and O(h) space
 public class HeightBalancedBinaryTree {
+    public static void main(String args[])
+    {
+        BinaryTree tree = new BinaryTree(1);
+        tree.left = new BinaryTree(2);
+        tree.right = new BinaryTree(3);
+        tree.left.left = new BinaryTree(4);
+        tree.left.right = new BinaryTree(5);
+        tree.left.left.left = new BinaryTree(8);
+
+        if (heightBalancedBinaryTree(tree))
+            System.out.println("Tree is balanced");
+        else
+            System.out.println("Tree is not balanced");
+    }
     static class BinaryTree {
         public int value;
         public BinaryTree left = null;
@@ -37,7 +51,7 @@ public class HeightBalancedBinaryTree {
             this.height = height;
         }
     }
-    public boolean heightBalancedBinaryTree(BinaryTree tree) {
+    public static boolean heightBalancedBinaryTree(BinaryTree tree) {
         TreeInfo treeInfo = getTreeInfo(tree);
         return treeInfo.isBalanced;
     }

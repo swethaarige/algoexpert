@@ -8,6 +8,7 @@ array brings us to index 0.
 Write a function that returns a boolean representing whether the jumps in the array form a single cycle.
 A single cycle occurs if, starting at any index in the array and following the jumps, every element is
 visited exactly once before landing back on the starting index.
+
 At first glance this doesn’t seem all that complex. Optimal time complexity is O(n) and optimal
 space is O(1). This fact makes it a little harder, but let’s see the challenges as they arise.
 Optimal Solution
@@ -17,6 +18,7 @@ started with, without visiting array.length number of elements, the conditions s
 are not satisfied. Alternatively, if we have visited array.length number of elements, and we do not
 end up back at the element on which we started, again, we know the conditions set in the problem
 are not satisfied.
+
 Considering this, there are three conditions we need to track.
 We need to visit n number of elements where n = array.length
 If, after we have visited every element, we are not back at the starting point, we have a problem
