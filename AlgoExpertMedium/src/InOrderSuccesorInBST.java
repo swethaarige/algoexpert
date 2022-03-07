@@ -22,6 +22,27 @@ Due to no use of any data structure for storing values.
 
  */
 public class InOrderSuccesorInBST {
+    // Driver program to test above functions
+    public static void main(String[] args)
+    {
+        BinaryTree tree = new BinaryTree(1);
+        tree.left = new BinaryTree(2);
+        tree.right = new BinaryTree(3);
+        tree.left.left = new BinaryTree(4);
+        tree.left.right = new BinaryTree(5);
+        tree.left.left.left = new BinaryTree(8);
+        BinaryTree succ = findSuccessor(tree, tree.left.left.left);
+        if (succ != null) {
+            System.out.println(
+                    "Inorder successor of "
+                            + tree.value + " is " + succ.value);
+        }
+        else {
+            System.out.println(
+                    "Inorder successor does not exist");
+        }
+    }
+
     static class BinaryTree {
         public int value;
         public BinaryTree left = null;
@@ -33,7 +54,7 @@ public class InOrderSuccesorInBST {
         }
     }
     //O(h) time where h is the height of the binary tree and O(1) space
-    public BinaryTree findSuccessor(BinaryTree tree, BinaryTree node) {
+    public static BinaryTree findSuccessor(BinaryTree tree, BinaryTree node) {
         if (node.right != null) return getLeftMostChild(node.right);
          return getRightMostParent(node);
     }
